@@ -1,7 +1,7 @@
 {% extends 'groups/group_base.html' %}
 {% block pregroup %}
     <div class="col-md-4">
-        <div  class="content">
+        <div class="content">
             {% if user.is_authenticated %}
                 <h2>Welcome back!
                     <a href="{% url 'posts:for_user' username=user.username %}">@{{user.username}}</a>
@@ -26,11 +26,11 @@
                         {{group.description_html|safe}}
                         <div class="row">
                             <div class="col-md-4">
-                                <span class='badge'>{{group.members.count}}</span>
+                                <span class='badge bg-secondary'>{{group.members.count}}</span>
                                 member{{group.members.count|pluralize}}
                             </div>
                             <div class="col-md-4">
-                                <span class='badge'>{{group.posts.count}}</span>
+                                <span class='badge bg-secondary'>{{group.posts.count}}</span>
                                 post{{group.posts.count|pluralize}}
                             </div>
                         </div>

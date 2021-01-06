@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title_block %}
     Index
 {% endblock %}
 
 {% block content %}
+    <div id="particles-js"></div>
     <h1>Welcome to Star Social!</h1>
+    <script src="{% static 'js/master.js' %}" async defer></script>
 {% endblock %}

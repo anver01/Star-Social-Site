@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'accounts/css/accounts_master.css' %}">
+{% endblock styles %}
+
 {% block content %}
     <div class="container">
     <h1>Login</h1>

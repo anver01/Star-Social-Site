@@ -1,0 +1,11 @@
+h2,h3,h4,h5{
+    color:red;
+}
+
+a{
+    text-decoration: none;
+}
+
+.grp-container{
+    margin-top: 3rem;
+}

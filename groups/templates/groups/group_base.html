@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'groups/css/groups_master.css' %}">
+{% endblock styles %}
 
 {% block content %}
-<div class="container">
+<div class="container grp-container">
     <div class="row">
         {% block pregroup %}
         {% endblock %}

@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}
+    Login
+{% endblock title_block %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/test.css' %}">
+{% endblock styles %}
 
 {% block content %}
     <h1>You are now logged in.</h1>
