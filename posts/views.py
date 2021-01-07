@@ -9,6 +9,7 @@ from django.contrib import messages
 
 from braces.views import SelectRelatedMixin
 
+from groups.models import Group
 from . import models
 from . import forms
 
@@ -21,6 +22,13 @@ User = get_user_model()
 class PostList(SelectRelatedMixin, generic.ListView):
     model = models.Post
     select_related = ('user', 'group')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["other_groups"] = Group.objects.all()
+        context["user_groups"] = Group.objects.all()
+        return context
+    
 
 class UserPosts(generic.ListView):
     model = models.Post

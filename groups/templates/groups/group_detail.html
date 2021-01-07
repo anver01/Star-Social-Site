@@ -1,4 +1,9 @@
 {% extends 'groups/group_base.html' %}
+
+{% block title_block %}
+    {{group.name|capfirst}}
+{% endblock %}
+
 {% block pregroup %}
     <h1>{{group.name}}</h1>
     <h2>Member Count: {{group.members.count}}</h2>
