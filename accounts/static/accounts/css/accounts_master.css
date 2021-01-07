@@ -1,3 +1,18 @@
-h2,h3,h4,h5{
-    color:rgba(255, 255, 255, 0.8);
+.btn {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+label {
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 0 5px 0;
+}
+
+form#login {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
