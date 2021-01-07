@@ -1,8 +1,41 @@
-.posts-container{
+.posts-container {
     margin-top: 3rem;
 }
 
-.btn{
-    font-size: 24px;
+.btn {
+    font-size: 20px;
     margin-top: 50px;
+}
+
+.btn.post-btn {
+    margin-top: 10px;
+}
+
+label {
+    color: #fff;
+    font-size: 24px;
+    margin: 5px 0 5px 0;
+}
+
+#post-title {
+    color: bisque;
+}
+
+.post {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 2px solid gray;
+}
+
+time {
+    position: relative;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: #fff;
 }
