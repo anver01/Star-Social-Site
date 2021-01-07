@@ -1,9 +1,17 @@
 h2,h3,h4,h5{
-    color:red;
+    color:aquamarine;
 }
 
 a{
     text-decoration: none;
+}
+
+p{
+    color: black;
+}
+
+.grp-description{
+    color: black;
 }
 
 .grp-container{

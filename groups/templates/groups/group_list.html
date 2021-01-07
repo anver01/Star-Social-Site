@@ -1,4 +1,6 @@
 {% extends 'groups/group_base.html' %}
+{% load static %}
+
 {% block pregroup %}
     <div class="col-md-4">
         <div class="content">
@@ -8,7 +10,7 @@
                 </h2>
             {% endif %}
             <h2>Groups</h2>
-            <p>Welcome to the groups page!</p>
+            <h4>Welcome to the groups page!</h4>
         </div>
         {% if user.is_authenticated %}
             <a href="{% url 'groups:create' %}" class='btn btn-dark'>Create Group</a>
