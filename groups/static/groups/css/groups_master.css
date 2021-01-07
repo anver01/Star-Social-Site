@@ -61,7 +61,7 @@ label {
     padding: 5px 8px;
 }
 
-#post-title>p {
+#post-title>a>p {
     color: bisque;
 }
 

@@ -17,7 +17,7 @@ label {
     margin: 5px 0 5px 0;
 }
 
-#post-title {
+#post-title>a {
     color: bisque;
 }
 
@@ -38,4 +38,8 @@ a {
 
 h3 {
     color: #fff;
+}
+
+h5 {
+    color: aquamarine;
 }

@@ -1,5 +1,5 @@
 <div class="post media">
-    <h3 id="post-title">{{post.message_html|safe}}</h3>
+    <h3 id="post-title"><a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{post.message_html|safe}}</a></h3>
     <div class="media-body">
         {% comment %} <strong>{{post.user.username}}</strong> {% endcomment %}
         <h5>
@@ -7,7 +7,7 @@
                 <a href="{% url 'posts:for_user' username=post.user.username %}">@{{post.user.username}}</a>
             </span>
             <time>
-                <a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{post.created_at}}</a>
+                {{post.created_at}}
             </time>
         </h5>
 
