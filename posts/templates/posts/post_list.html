@@ -11,28 +11,28 @@
                 <div class="card-body">
                     <h4 class="card-title">Your Groups</h4>
                     <div class="card-text">
-                        <ul>
+                        <ul class="list-group list-group-flush">
                             {% for member_group in user_groups %}
-                                {% comment %} <li><a href="{% url 'groups:single' slug=member_group.group.slug %}">{{member_group}}</a></li> {% endcomment %}
-                                {{member_group}}
+                                <li class="list-group-item"><a href="{% url 'groups:single' slug=member_group.slug %}">{{member_group}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title">All Groups</h4>
+                    <div class="card-text">
+                        <ul class="list-group list-group-flush">
+                            {% for other_group in other_groups %}
+                                <li class="list-group-item"><a href="{% url 'groups:single' slug=other_group.slug %}">{{other_group}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
             </div>
         {% endif %}
-        <div class="card text-center">
-            <div class="card-body">
-                <h4 class="card-title">All Groups</h4>
-                <div class="card-text">
-                    <ul class="list-group list-group-flush">
-                        {% for other_group in other_groups %}
-                            <li class="list-group-item"><a href="{% url 'groups:single' slug=other_group.slug %}">{{other_group}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 {% endblock %}
 
