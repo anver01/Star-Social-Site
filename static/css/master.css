@@ -4,28 +4,36 @@ h1 {
     margin-top: 50px;
 }
 
-h3{
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-}
-
-td, th{
+td,
+th {
     color: #fff;
     padding: 5px;
 }
-table, tr, td, th{
+
+table,
+tr,
+td,
+th {
     border: 2px solid white;
     text-align: center;
 }
 
-th{
+th {
     padding: inherit 5px;
 }
 
-table{
+.mars-api-data {
     position: absolute;
-    top: 700px;
-    left: 52%;
+    top: 650px;
+    left: 68%;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: underline;
 }
 
 /* ---- reset ---- */
@@ -50,39 +58,64 @@ canvas {
     z-index: -1;
 }
 
-#api-image{
+#api-image {
     transform: scale(0.5);
 }
 
-div.index-container{
+div.index-container {
     max-width: 80%;
     height: fit-content;
 }
 
-.card{
-    position: absolute;
-    top: 1000px;
+.card {
+    position: relative;
+    float: right;
+    right: 50px;
+    top: 50px;
     width: 400px;
 }
 
-.featured-news{
+.featured-news {
     background-color: #fff;
-    width: 600px;
-    position: absolute;
-    top: 250px;
+    width: 900px;
+    position: relative;
+    left: 50px;
+    top: 50px;
     border-radius: 5px;
 }
 
-.featured-news>h2{
+.featured-news>h2 {
     text-align: center;
-    margin: 10px 0 5px 0;
+    padding-top: 15px;
 }
 
-#featured-text{
+#featured-text {
     text-align: justify;
     margin: 30px;
+    padding-bottom: 20px;
 }
 
-#featured-image{
+#featured-image {
+    transform: scale(0.83);
     float: left;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+#aopd-img {
+    position: absolute;
+    left: 160px;
+    margin-top: 40px;
+    transform: scale(0.8);
+    border: 2px solid #fff;
+}
+
+figcaption {
+    color: #fff;
+    position: relative;
+    top: 35px;
+    left: -14%;
+    font-size: 40px;
+    margin: 10px;
+    text-decoration: underline;
 }
