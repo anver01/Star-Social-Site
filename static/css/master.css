@@ -4,12 +4,36 @@ h1 {
     margin-top: 50px;
 }
 
+h3{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+td, th{
+    color: #fff;
+    padding: 5px;
+}
+table, tr, td, th{
+    border: 2px solid white;
+    text-align: center;
+}
+
+th{
+    padding: inherit 5px;
+}
+
+table{
+    position: absolute;
+    top: 700px;
+    left: 52%;
+}
+
 /* ---- reset ---- */
 
 body {
     margin: 0;
     background-color: #17182f;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 canvas {
@@ -24,4 +48,41 @@ canvas {
     width: 100%;
     height: 100vh;
     z-index: -1;
+}
+
+#api-image{
+    transform: scale(0.5);
+}
+
+div.index-container{
+    max-width: 80%;
+    height: fit-content;
+}
+
+.card{
+    position: absolute;
+    top: 1000px;
+    width: 400px;
+}
+
+.featured-news{
+    background-color: #fff;
+    width: 600px;
+    position: absolute;
+    top: 250px;
+    border-radius: 5px;
+}
+
+.featured-news>h2{
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+
+#featured-text{
+    text-align: justify;
+    margin: 30px;
+}
+
+#featured-image{
+    float: left;
 }

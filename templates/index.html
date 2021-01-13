@@ -7,5 +7,50 @@
 
 {% block content %}
     <h1>Welcome to Star Social!</h1>
+    {% comment %} <div class="aopd-api-data">
+        <h3>    
+            {{aopd_data.copyright}}
+        </h3>
+        <p>{{aopd_data.explanation}}</p>
+        <img id="api-image" src="{{aopd_data.url}}" alt="Error 404" title="{{aopd_data.title}}">
+    </div> {% endcomment %}
+    <div class="container index-container">
+        <div class="content">
+            <div class="mars-api-data">
+                <table>
+                    <tr>
+                        <th>Average Temperature °C</th>
+                        <th>Current Season</th>
+                    </tr>
+
+                    {% for key, value in mars_data.items %}
+                    <tr>
+                        {% if key in mars_data.sol_keys %}
+                            <td>{{value.AT.av|default:"Not Available"}}</td>
+                            <td>{{value.Season}}</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="news card text-center">
+                <div class="card-body">
+                    <h4 class="card-title">Your News</h4>
+                    <div class="card-text">
+                        <ul class="list-group list-group-flush">
+                            {% for news in news_data|slice:":5" %}
+                                <li class="list-group-item"><a href="{{news.url}}">{{news.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-news">
+                <h2><a href="{{featured_data.url}}">{{featured_data.name}}</a></h2>
+                <p id="featured-text">{{featured_data.abstract}}</p>
+                <img id="featured-image" src="{{featured_data.thumbnail_retina}}" alt="">
+            </div>  
+        </div>
+    </div>
     <script src="{% static 'js/master.js' %}" async defer></script>
 {% endblock %}
