@@ -4,39 +4,12 @@ h1 {
     margin-top: 50px;
 }
 
-td,
-th {
-    color: #fff;
-    padding: 5px;
+div.index-container {
+    margin-top: 30px;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-evenly;
 }
-
-table,
-tr,
-td,
-th {
-    border: 2px solid white;
-    text-align: center;
-}
-
-th {
-    padding: inherit 5px;
-}
-
-.mars-api-data {
-    position: absolute;
-    top: 650px;
-    left: 68%;
-}
-
-caption {
-    caption-side: top;
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
-    text-decoration: underline;
-}
-
-/* ---- reset ---- */
 
 body {
     margin: 0;
@@ -58,29 +31,17 @@ canvas {
     z-index: -1;
 }
 
-#api-image {
-    transform: scale(0.5);
-}
+/* left */
 
-div.index-container {
-    max-width: 80%;
-    height: fit-content;
-}
-
-.card {
-    position: relative;
-    float: right;
-    right: 50px;
-    top: 50px;
-    width: 400px;
+.left {
+    margin: 20px;
 }
 
 .featured-news {
     background-color: #fff;
     width: 900px;
     position: relative;
-    left: 50px;
-    top: 50px;
+    margin: auto;
     border-radius: 5px;
 }
 
@@ -102,20 +63,68 @@ div.index-container {
     border: 2px solid black;
 }
 
-#aopd-img {
-    position: absolute;
-    left: 160px;
-    margin-top: 40px;
-    transform: scale(0.8);
-    border: 2px solid #fff;
-}
 
 figcaption {
     color: #fff;
     position: relative;
-    top: 35px;
-    left: -14%;
     font-size: 40px;
-    margin: 10px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+#apod-img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+    margin-bottom: 20px;
+    width: 800px;
+    border: 2px solid #fff;
+}
+
+/* right */
+
+.right {
+    margin: 20px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    margin: auto;
+}
+
+td,
+th {
+    color: #fff;
+    padding: 5px;
+}
+
+table,
+tr,
+td,
+th {
+    border: 2px solid white;
+    text-align: center;
+}
+
+th {
+    padding: inherit 5px;
+}
+
+table {
+    margin: auto;
+}
+
+.mars-api-data {
+    position: relative;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
     text-decoration: underline;
 }

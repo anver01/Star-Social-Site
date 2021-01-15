@@ -15,45 +15,49 @@
         <img id="api-image" src="{{aopd_data.url}}" alt="Error 404" title="{{aopd_data.title}}">
     </div> {% endcomment %}
     <div class="container index-container">
-        <div class="mars-api-data">
-            <table>
-            <caption>Mars Temprature Data</caption>
-                <tr>
-                    <th>Average Temperature °C</th>
-                    <th>Current Season</th>
-                </tr>
-
-                {% for key, value in mars_data.items %}
-                <tr>
-                    {% if key in mars_data.sol_keys %}
-                        <td>{{value.AT.av|default:"Not Available"}}</td>
-                        <td>{{value.Season}}</td>
-                    {% endif %}
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-        <div class="news card text-center">
-            <div class="card-body">
-                <h4 class="card-title">Your News</h4>
-                <div class="card-text">
-                    <ul class="list-group list-group-flush">
-                        {% for news in news_data|slice:":5" %}
-                            <li class="list-group-item"><a href="{{news.url}}">{{news.name}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+        <div class="left">
+            <figure>
+                <figcaption>NASA Astronomy Photo of the Day</figcaption>
+                <img id="apod-img" src="{{aopd_data.url}}" title={{aopd_data.title}} alt="">
+            </figure>
+            <div class="featured-news">
+                <h2><a href="{{featured_data.url}}">{{featured_data.name}}</a></h2>
+                <img id="featured-image" src="{{featured_data.thumbnail_retina}}" alt="">
+                <p id="featured-text">{{featured_data.abstract}}</p>
             </div>
         </div>
-        <div class="featured-news">
-            <h2><a href="{{featured_data.url}}">{{featured_data.name}}</a></h2>
-            <img id="featured-image" src="{{featured_data.thumbnail_retina}}" alt="">
-            <p id="featured-text">{{featured_data.abstract}}</p>
+        <div class="right">
+            <div class="news card text-center">
+                <div class="card-body">
+                    <h4 class="card-title">Your News</h4>
+                    <div class="card-text">
+                        <ul class="list-group list-group-flush">
+                            {% for news in news_data|slice:":5" %}
+                                <li class="list-group-item"><a href="{{news.url}}">{{news.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mars-api-data">
+                <table>
+                    <caption>Mars Temprature Data</caption>
+                    <tr>
+                        <th>Average Temperature °C</th>
+                        <th>Current Season</th>
+                    </tr>
+
+                    {% for key, value in mars_data.items %}
+                    <tr>
+                        {% if key in mars_data.sol_keys %}
+                            <td>{{value.AT.av|default:"Not Available"}}</td>
+                            <td>{{value.Season}}</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
-        <figure>
-            <img id="aopd-img" src="{{aopd_data.url}}" title={{aopd_data.title}} alt="">
-            <figcaption>NASA Astronomy Photo of the Day</figcaption>
-        </figure>
     </div>
     <script src="{% static 'js/master.js' %}" async defer></script>
 {% endblock %}
